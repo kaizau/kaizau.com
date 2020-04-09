@@ -1,7 +1,8 @@
 {
   "name": "kaizau.com-2020",
   "scripts": {
-    "start": "parcel serve 'source/**.pug' --port 8888 --no-source-maps"
+    "start": "rimraf ./dist && parcel serve 'source/**.pug' --port 8888 --no-source-maps",
+    "build": "rimraf ./dist && parcel build 'source/**.pug' --no-source-maps"
   },
   "private": true,
   "devDependencies": {
@@ -11,6 +12,7 @@
     "parcel-plugin-pug-front-matter": "^0.5.0",
     "parcel-plugin-strip-index-html": "^0.1.2",
     "pug": "^2.0.4",
+    "rimraf": "^3.0.2",
     "stylus": "^0.54.7"
   }
 }
