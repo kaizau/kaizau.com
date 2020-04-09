@@ -9,7 +9,7 @@ header(class=`PageHeader ${headerClass ? headerClass : ''}` role='banner')
       ul
         each page in nav
           li
-            if (current !== page.path)
+            if (navName !== page.name)
               a(href=page.path)= page.name
             else
               span.active= page.name
