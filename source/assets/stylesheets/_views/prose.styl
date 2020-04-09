@@ -1,18 +1,13 @@
 .Prose
+  margin: 0 auto
   padding: space.xl 0
 
   // Layout
   +above(viewport.sm)
-    col(12/14, 1/14)
-
-  +above(viewport.md)
-    col(8/10, 1/10)
+    max-width: 600px
 
   +above(viewport.lg)
-    col(4/6, 1/6)
-
-  +above(viewport.xl)
-    col(3/5, 1/5)
+    max-width: 750px
 
   // Elements
   header
@@ -23,7 +18,7 @@
       margin: 0
       padding: 0
 
-    h2 
+    h2
       font-style: italic
       font-size: font.lg
 
@@ -32,7 +27,7 @@
       font-size: font.md * 1.125
       line-height: space.line * 1.125
 
-  > ul, 
+  > ul,
   > ol
     margin: space.md 0
 

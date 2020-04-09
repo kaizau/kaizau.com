@@ -26,12 +26,6 @@
     .text
       overflow: hidden
 
-  .wrap
-    +above(viewport.md)
-      col(4/5)
-
-    +above(viewport.lg)
-      col(3/4)
-
-    +above(viewport.xl)
-      col(2/3)
+  +above(viewport.md)
+    .wrap
+      max-width: 700px

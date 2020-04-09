@@ -97,20 +97,19 @@
   // Break image groups into 2 cols
   +above(viewport.sm)
     .image-group
-      overflow: hidden
+      display: flex
+      justify-content: space-between
 
       .image
-        float: left
-        margin-left: 2%
-        width: 49%
-
-        &:first-child
-          margin-left: 0
+        width: 48%
 
   // Separate text and image cols
   +above(viewport.lg)
+    display: flex
+
     .text
-      col(3/10)
+      flex: 3
+      margin-right: space.lg
 
     .images
-      col(7/10)
+      flex: 7

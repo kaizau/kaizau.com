@@ -1,34 +1,32 @@
 .Panels
+  margin: space.xl auto
   transform: translate3d(0,0,0)
 
   ul
     clearfix()
     naked-list()
-    margin: space.xl 0
 
   li
     background: gray.fog
-    display: block
+    position: relative
     font-size: 0
     line-height: 0
+    margin-top: space.md
     overflow: hidden
-    position: relative
 
     &:first-child
       margin-top: 0
 
-    // Cycle every 2
-    +above(viewport.md)
-      col(1/2, cycle: 2, gutter: 1)
+  img
+    backface-visibility: hidden
+    opacity: .9
+    transition: all .2s
+    transform: scale(1)
+    z-index: 1
 
-      &:nth-child(2)
-        margin-top: 0
-
-    // margin-top adjustments to keep grid's % margins looking even
-    margin-top: 10px
-
-    +above(viewport.lg)
-      margin-top: 12px
+  a:hover img
+    opacity: 1
+    transform: scale(1.01)
 
   .text
     background: rgba(0,0,0,.5)
@@ -52,14 +50,17 @@
   h3
     margin-top: space.xs
 
-  a 
-    img
-      backface-visibility: hidden
-      opacity: .9
-      transition: all .2s
-      transform: scale(1)
-      z-index: 1
+  +above(viewport.md)
+    ul
+      display: flex
+      flex-wrap: wrap
+      margin-left: -2%
+      margin-top: (0 - space.md)
 
-    &:hover img
-      opacity: 1
-      transform: scale(1.01)
+    li
+      margin-left: 2%
+      margin-top: space.md
+      width: 48%
+
+      &:first-child
+        margin-top: space.md
