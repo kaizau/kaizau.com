@@ -3,10 +3,11 @@ html.no-js
   head
     meta(charset="utf-8")
     meta(content="IE=edge" http-equiv="X-UA-Compatible")
-    link(href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet")
+    link(href!="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet")
 
-    title= title
-    meta(name="description" content="#{description}")
+    title= title || "Kai Zau"
+    if description
+      meta(name="description" content=description)
     meta(name="viewport" content="width=device-width, initial-scale=1")
 
     link(href="/assets/stylesheets/package.styl" rel="stylesheet")
@@ -51,5 +52,4 @@ html.no-js
               #[a(href="/p/gotta-be-good-tour/index.pug") events].
 
     block foot
-
     block javascripts
