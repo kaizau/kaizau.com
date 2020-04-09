@@ -3,52 +3,52 @@ html.no-js
   head
     meta(charset="utf-8")
     meta(content="IE=edge" http-equiv="X-UA-Compatible")
-    link(href='//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,700' rel='stylesheet')
+    link(href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet")
 
     title= title
     meta(name="description" content="#{description}")
     meta(name="viewport" content="width=device-width, initial-scale=1")
 
-    link(href='/assets/stylesheets/package.styl' rel="stylesheet")
+    link(href="/assets/stylesheets/package.styl" rel="stylesheet")
     block stylesheets
 
     block head
 
     script.
-      with(document.documentElement){className=className.replace(/\bno-js\b/,'js')}
+      with(document.documentElement){className=className.replace(/\bno-js\b/,"js")}
 
-    if (environment !== 'production')
+    if (environment !== "production")
       meta(name="robots" content="noindex, nofollow")
-    else if (googleAnalytics !== '')
+    else if (googleAnalytics !== "")
       script.
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '#{googleAnalytics}', 'auto');
-        ga('send', 'pageview');
+        })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+        ga("create", "#{googleAnalytics}", "auto");
+        ga("send", "pageview");
 
-  body(class=`Body ${bodyClass ? bodyClass : ''}`)
+  body(class=`Body ${bodyClass ? bodyClass : ""}`)
     .Page
       .PageMain
         .PageMainInner
           .PageContent
             block content
 
-      footer.PageFooter(role='contentinfo')
+      footer.PageFooter(role="contentinfo")
         .Section
           .wrap
             .img
-              img(src='/assets/images/kai.jpg')
+              img(src="/assets/images/kai.jpg")
             p.text.
               Kai Zau is a programmer. He cofounded
-              #[a(href='/p/ultraworking/index.pug') Ultraworking], created the
+              #[a(href="/p/ultraworking/index.pug") Ultraworking], created the
               popular open source tool
-              #[a(href='https://github.com/FontCustom/fontcustom') Font Custom], and
-              has #[a(href='/consulting/index.pug') consulted] for a variety of
+              #[a(href="https://github.com/FontCustom/fontcustom") Font Custom], and
+              has #[a(href="/consulting/index.pug") consulted] for a variety of
               companies on matters of code and design. He is an occasional author of
-              #[a(href='/p/gateless/index.pug') books] and speaker at
-              #[a(href='/p/gotta-be-good-tour/index.pug') events].
+              #[a(href="/p/gateless/index.pug") books] and speaker at
+              #[a(href="/p/gotta-be-good-tour/index.pug") events].
 
     block foot
 
