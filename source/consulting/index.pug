@@ -1,8 +1,8 @@
 ---
 title: Kai Zau / consulting
 description: The programming and design portfolio of Kai Zau.
+bodyClass: BodyConsulting
 headerClass: dark
-useJquery: true
 projects:
   -
     name: Groupon
@@ -159,11 +159,11 @@ projects:
       link: http://d2s5qek9wq16ez.cloudfront.net/portfolio/blockave/blockave-web-home.jpg
 ---
 
-extends /_shared/layout.pug
+extends ../_shared/layout.pug
 
 block content
   .Masthead
-    include /_shared/header.pug
+    include ../_shared/header.pug
 
     .Section
       .text
@@ -215,7 +215,7 @@ block content
               if (image.src)
                 .image
                   a(href=image.link class=(image.mobile ? 'mobile' : ''))
-                    img(src='assets/images/consulting/' + image.src)
+                    img(src='/assets/images/consulting/' + image.src)
                     .caption= image.caption
               else
                 .image-group
@@ -227,13 +227,14 @@ block content
                     else
                       .image
                         a(href=part.link class=(part.mobile ? 'mobile' : ''))
-                          img(src='assets/images/consulting/' + part.src)
+                          img(src='/assets/images/consulting/' + part.src)
                           .caption= part.caption
 
 block foot
   .Overlay
     .table
       .cell
+        img
 
 block javascripts
-  script(src='assets/javascripts/consulting.coffee')
+  script(src='/assets/javascripts/consulting.js')

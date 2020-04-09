@@ -1,14 +1,15 @@
 ---
 title: Ultraworking / Kai Zau
 description: A sanctuary for people who don't want "work life balance."
+bodyClass: BodyPUltraworking
 headerClass: dark
 ---
 
-extends /_shared/layout.pug
+extends ../../_shared/layout.pug
 
 block content
   .Masthead
-    include /_shared/header.pug
+    include ../../_shared/header.pug
 
   .Section
     article.Prose(role='article')
@@ -16,7 +17,7 @@ block content
         h1 Are you Ultraworking?
         h2 Building a home for the ambitious and analytical
 
-      :markdown
+      :md
         Do you remember the most recent "golden age" of your life?
 
         Those blessed times where everything just flowed, and you made huge
@@ -90,4 +91,4 @@ block content
           li
             a(href='http://www.ultraworking.com') Visit Ultraworking.com
 
-        include /_shared/p-cta.pug
+        include ../../_shared/p-cta.pug

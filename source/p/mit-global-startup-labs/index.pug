@@ -1,14 +1,15 @@
 ---
 title: MIT Global Startup Labs / Kai Zau
 description: On the ground with MIT Global Startup Labs.
+bodyClass: BodyPMitGlobalStartupLabs
 headerClass: dark dark-overlay
 ---
 
-extends /_shared/layout.pug
+extends ../../_shared/layout.pug
 
 block content
   .Masthead
-    include /_shared/header.pug
+    include ../../_shared/header.pug
 
   .Section
     article.Prose(role='article')
@@ -25,7 +26,7 @@ block content
         cite.
           — Mbe Khumalo, Founder of <a href='http://philanisa.wix.com/mining'>Philani SA</a>
 
-      :markdown
+      :md
         I've been lucky enough to have had a multidisciplinary career. From
         skunkworks at a Fortune 500, to product design at various early-stage
         startups, I've seen how the technology sausage gets made.
@@ -65,4 +66,4 @@ block content
           li
             a(href='http://misti.mit.edu/mit-africa-initiative') Learn about MIT-AFRICA
 
-        include /_shared/p-cta.pug
+        include ../../_shared/p-cta.pug

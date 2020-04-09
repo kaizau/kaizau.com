@@ -1,14 +1,15 @@
 ---
 title: The Gotta Be Good Tour / Kai Zau
 description: The annual nonprofit university tour with GiveGetWin.
+bodyClass: BodyPGottaBeGoodTour
 headerClass: dark dark-overlay
 ---
 
-extends /_shared/layout.pug
+extends ../../_shared/layout.pug
 
 block content
   .Masthead
-    include /_shared/header.pug
+    include ../../_shared/header.pug
 
   .Section
     article.Prose(role='article')
@@ -25,7 +26,7 @@ block content
 
       iframe(width="100%" height="375" src="http://www.youtube.com/embed/NfKE2JK9zVU?controls=2&fs=0&modestbranding=1&rel=0" frameborder="0")
 
-      :markdown
+      :md
         **Update - 29 Apr 2016:** Added my talk and photos from the 2015 tour below.
 
         Despite all the technology that exists to connect us, there is
@@ -63,4 +64,4 @@ block content
           li
             a(href='https://www.youtube.com/channel/UCZ-K0l5qrkQXvggWTiMkI4A') Watch videos of the talks
 
-        include /_shared/p-cta.pug
+        include ../../_shared/p-cta.pug

@@ -1,13 +1,14 @@
 ---
 title: Gateless / Kai Zau
 description: Core principles from Kai's book, Gateless.
+bodyClass: BodyPGateless
 ---
 
-extends /_shared/layout.pug
+extends ../../_shared/layout.pug
 
 block content
   .Masthead
-    include /_shared/header.pug
+    include ../../_shared/header.pug
 
   .Section
     article.Prose(role='article')
@@ -22,7 +23,7 @@ block content
           helped me to take a look at why I do what I do.
         cite — Huan, Amazon.com reviewer
 
-      :markdown
+      :md
         _"Hey, do you want to write a book about this?"_
 
         [Sebastian](http://sebastianmarshall.com/) and I had spent the last two
@@ -66,4 +67,4 @@ block content
           li
             a(href='http://www.gatelessbook.com') Visit GatelessBook.com
 
-        include /_shared/p-cta.pug
+        include ../../_shared/p-cta.pug

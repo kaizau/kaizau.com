@@ -1,13 +1,14 @@
 ---
 title: Kai Zau / 404
 description: This is an error page. If you're reading this, something bad must have happened.
+bodyClass: Body404
 permalink: false
 ---
 
-extends /_shared/layout.pug
+extends ./_shared/layout.pug
 
 block content
-  include /_shared/header.pug
+  include ./_shared/header.pug
 
   main.Section.with-center-alignment.with-vertical-padding(role='main')
     h1(style="font-size:60px;line-height:1") That page couldn't be found.

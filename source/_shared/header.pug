@@ -1,6 +1,15 @@
-header(class="PageHeader #{headerClass ? headerClass : ''}" role='banner')
+header(class=`PageHeader ${headerClass ? headerClass : ''}` role='banner')
   .Section
     h1.Logo
-      a(href='/') Kai Zau
+      a(href='/index.pug') Kai Zau
 
-    include /_shared/nav.pug
+    //- NOTE: Copied from nav.pug to work around Parcel + Pug module resolution bug.
+    - nav = [{name: 'Personal', path: '/index.pug'}, {name: 'Professional', path: '/consulting/index.pug'}, {name: 'Contact', path: '/contact/index.pug'}]
+    nav.Nav(role='navigation')
+      ul
+        each page in nav
+          li
+            if (current !== page.path)
+              a(href=page.path)= page.name
+            else
+              span.active= page.name
