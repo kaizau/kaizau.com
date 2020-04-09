@@ -1,14 +1,20 @@
 {
   "name": "kaizau.com-2020",
   "scripts": {
-    "start": "parcel watch source/**.pug --no-source-maps"
+    "start": "parcel serve source/**.pug --port 8888 --no-source-maps"
   },
   "private": true,
   "devDependencies": {
+    "coffeescript": "^2.5.1",
     "jeet": "^7.2.0",
     "normalize.css": "^8.0.1",
     "parcel": "^1.12.4",
     "parcel-plugin-pug-front-matter": "^0.5.0",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "stylus": "^0.54.7"
+  },
+  "dependencies": {
+    "eventie": "^1.0.6",
+    "wolfy87-eventemitter": "^5.2.9"
   }
 }
