@@ -16,12 +16,12 @@
 
     .Geometry
       position: relative
-      top: -60px
+      top: -90px
       z-index: 1
 
     +above(viewport.sm)
       .Geometry
-        top: 0
+        top: -30px
 
     +above(viewport.md)
       & > .Section
@@ -29,3 +29,7 @@
 
       .text
         position: initial
+        width: 60%
+
+      .Geometry
+        width: 40%
