@@ -1,0 +1,55 @@
+.Nav
+  font-size: font.md
+  line-height: space.line
+
+  ul
+    naked-list()
+
+  .active
+    font-weight: bold
+
+  //
+  // Horizontal Layout
+  //
+
+  +above(viewport.sm)
+    li
+      float: left
+      margin-left: space.sm
+
+      &:first-child
+        margin-left: 0
+
+    a, .active
+      display: block
+      line-height: space.line
+      padding-left: 5px
+      padding-right: 5px
+      position: relative
+
+    a
+      color: gray.shale
+
+      &:before, &:after
+        background: gray.steel
+        content: ''
+        display: block
+        height: 1px
+        left: 0
+        opacity: 0
+        position: absolute
+        top: -16px
+        transition: all .2s
+        width: 100%
+
+      &:after
+        bottom: -16px
+        top: inherit
+
+      &:hover:before
+        opacity: 1
+        top: -8px
+
+      &:hover:after
+        bottom: -8px
+        opacity: 1

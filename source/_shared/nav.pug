@@ -1,0 +1,10 @@
+- nav = [{name: 'Personal', path: '/'}, {name: 'Professional', path: '/consulting'}, {name: 'Contact', path: '/contact'}]
+
+nav.Nav(role='navigation')
+  ul
+    each page in nav
+      li
+        if (current !== page.path)
+          a(href=page.path)= page.name
+        else
+          span.active= page.name

@@ -1,0 +1,79 @@
+.Prose
+  padding: space.xl 0
+
+  // Layout
+  +above(viewport.sm)
+    col(12/14, 1/14)
+
+  +above(viewport.md)
+    col(8/10, 1/10)
+
+  +above(viewport.lg)
+    col(4/6, 1/6)
+
+  +above(viewport.xl)
+    col(3/5, 1/5)
+
+  // Elements
+  header
+    margin-bottom: space.line
+    text-align: center
+
+    h1, h2
+      margin: 0
+      padding: 0
+
+    h2 
+      font-style: italic
+      font-size: font.lg
+
+  +above(viewport.sm)
+    .lead
+      font-size: font.md * 1.125
+      line-height: space.line * 1.125
+
+  > ul, 
+  > ol
+    margin: space.md 0
+
+    li
+      margin-top: space.sm
+      &:first-child
+        margin-top: 0
+
+  .testimonial
+    border-left: space.xs solid gray.fog
+    color: gray.steel
+    font-style: italic
+    margin: space.line 0
+    padding: space.xs space.sm 0
+
+    blockquote
+      margin: 0
+
+    cite
+      display: block
+      font-size: font.sm
+      margin-top: space.xxs
+      text-align: right
+
+  iframe
+    margin-top: space.line
+
+  a:hover
+    text-decoration: underline
+
+  footer
+    border-top: 1px solid #ddd
+    font-size: font.sm
+    margin-top: space.line
+    padding-top: space.line
+
+    ul
+      naked-list()
+
+    .cta
+      margin-top: space.line - space.xs
+
+    .Button
+      margin: space.xs space.xs 0 0

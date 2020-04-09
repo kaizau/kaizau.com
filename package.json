@@ -1,0 +1,14 @@
+{
+  "name": "kaizau.com-2020",
+  "scripts": {
+    "start": "parcel watch source/**.pug --no-source-maps"
+  },
+  "private": true,
+  "devDependencies": {
+    "jeet": "^7.2.0",
+    "normalize.css": "^8.0.1",
+    "parcel": "^1.12.4",
+    "parcel-plugin-pug-front-matter": "^0.5.0",
+    "pug": "^2.0.4"
+  }
+}

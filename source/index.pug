@@ -1,0 +1,43 @@
+---
+title: Kai Zau
+description: The online sandbox of Kai Zau — founder of Ultraworking, coauthor of Gateless.
+---
+
+extends /_shared/layout.pug
+
+block content
+  .Masthead
+    .Section
+      h1.Logo
+        a(href='/') Kai Zau
+      img(src='assets/images/laptop.jpg' alt='Kai Zau')
+
+  .Divider
+    include /_shared/nav.pug
+
+  .Panels.Section
+    ul
+      li
+        a(href='/p/ultraworking')
+          .text
+            h2 Are you Ultraworking?
+            h3 Building a home for the ambitious and analytical
+          img(src='assets/images/panels/uw.jpg' alt='This guy is definitely Ultraworking.')
+      li
+        a(href='/p/gotta-be-good-tour')
+          .text
+            h2 The Gotta Be Good Tour
+            h3 Speaking on the annual nonprofit university tour
+          img(src='assets/images/panels/ggw.jpg' alt='Jay Bobzin at Harvard on the 2014 Tour.')
+      li
+        a(href='/p/mit-global-startup-labs')
+          .text
+            h2 Engineering Entrepreneurship
+            h3 On the ground with MIT Global Startup Labs
+          img(src='assets/images/panels/mit.jpg' alt='The MIT GSL team: Dalitso, Jen, Emele, Kai, Bryan')
+      li
+        a(href='/p/gateless')
+          .text
+            h2 The Four Currencies Model
+            h3 Core principles from my book <em>Gateless</em>
+          img(src='assets/images/panels/gateless.jpg' alt='Cover art from Gateless (Isle of Graia, David Roberts)')

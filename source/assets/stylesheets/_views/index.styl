@@ -1,0 +1,33 @@
+.BodyIndex
+  .Masthead
+    background: gray.void
+    color: gray.white
+    min-height: 0
+
+    .Section
+      position: relative
+
+    .Logo
+      left: space.md
+      position: absolute
+      top: space.line
+
+      // Mirrors .with-horizontal-padding
+      +above(viewport.md)
+        left: space.lg
+
+    img
+      float: right
+      width: 100%
+      max-width: 500px
+      vertical-align: bottom
+
+.IndexList
+  list-style: none
+
+  li
+    margin: space.line 0
+
+  h2, h3
+    margin: 0
+    padding: 0

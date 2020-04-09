@@ -1,0 +1,34 @@
+.PageHeader
+  @extends .with-vertical-padding
+
+  // Dark style
+  &.dark, &.dark a
+    color: gray.white
+
+    &:before, &:after
+      background: gray.smoke
+
+  // Light-overlay
+  &.dark-overlay
+    background: gray.void
+    background: rgba(0,0,0,.65)
+
+  // Light-overlay
+  &.light-overlay
+    background: gray.white
+    background: rgba(255,255,255,.65)
+
+  .Nav
+    margin-top: space.line
+
+  //
+  // Horizontal Layout
+  //
+
+  +above(viewport.sm)
+    .Logo
+      float: left
+
+    .Nav
+      float: right
+      margin-top: 10px

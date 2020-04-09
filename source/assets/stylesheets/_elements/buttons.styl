@@ -1,0 +1,45 @@
+//
+// All Buttons
+// ----------------------------------------------------------------------------
+
+// Default
+.Button
+  background: gray.smoke
+  color: gray.silver
+  border-radius: radius.xs
+  cursor: pointer
+  display: inline-block
+  font-weight: 400
+  font-size: font.md
+  height: space.line * 1.5
+  line-height: space.line
+  padding: (space.line / 4) space.md
+  text-align: center
+  text-decoration: none
+  transition: all .2s
+
+  &:hover
+    background: tint(teal, 25%)
+    color: gray.white
+    text-decoration: none !important
+
+// Alt
+.Button.alt
+  background: teal
+  color: tint(teal, 75%)
+
+  &:hover
+    background: tint(teal, 25%)
+    color: gray.white
+
+// Inline
+.Button.inline
+  margin-bottom: (space.line / -4)
+  margin-top: (space.line / -4)
+
+// Larger
+.Button.large
+  border-radius: radius.sm
+  font-size: font.lg
+  height: space.line * 2
+  padding: (space.line / 2) space.lg

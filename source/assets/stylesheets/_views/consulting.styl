@@ -1,0 +1,33 @@
+.BodyConsulting
+  .PageHeader, 
+  .Masthead .text
+    position: relative
+    z-index: 10
+
+  .Masthead
+    background: gray.void
+    color: gray.rain
+    overflow: hidden
+    position: relative
+
+    .Button
+      margin-top: space.line
+
+    .Geometry
+      margin-top: -300px
+      top: -60px
+      position: relative
+      z-index: 1
+
+    +above(viewport.sm)
+      .text
+        col(4/5)
+      .Geometry
+        margin-top: 0
+        top: 0
+
+    +above(viewport.md)
+      .text
+        col(3/5)
+      .Geometry
+        col(2/5)

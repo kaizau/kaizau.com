@@ -1,0 +1,38 @@
+.BodyContact
+  .Contact
+    margin-bottom: space.md
+
+    ul
+      clearfix()
+      naked-list()
+
+    span
+      color: gray.steel
+      display: block
+      font-size: font.xs
+      font-style: italic
+      margin: space.sm 0 space.xxs
+
+    a:hover
+      text-decoration: underline
+
+    .form
+      margin: space.xl 0 space.md
+
+    iframe
+      margin-left: -6px
+
+    +between(viewport.xs, viewport.md)
+      li
+        float: left
+        margin-left: space.lg
+
+        &:first-child
+          margin-left: 0
+
+    +above(viewport.md)
+      .text
+        col(2/5)
+
+      .form
+        col(3/5)

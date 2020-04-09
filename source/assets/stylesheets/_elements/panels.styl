@@ -1,0 +1,65 @@
+.Panels
+  transform: translate3d(0,0,0)
+
+  ul
+    clearfix()
+    naked-list()
+    margin: space.xl 0
+
+  li
+    background: gray.fog
+    display: block
+    font-size: 0
+    line-height: 0
+    overflow: hidden
+    position: relative
+
+    &:first-child
+      margin-top: 0
+
+    // Cycle every 2
+    +above(viewport.md)
+      col(1/2, cycle: 2, gutter: 1)
+
+      &:nth-child(2)
+        margin-top: 0
+
+    // margin-top adjustments to keep grid's % margins looking even
+    margin-top: 10px
+
+    +above(viewport.lg)
+      margin-top: 12px
+
+  .text
+    background: rgba(0,0,0,.5)
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.85))
+    bottom: 0
+    color: gray.white
+    left: 0
+    font-size: font.md
+    line-height: space.line
+    padding-top: space.xl
+    position: absolute
+    width: 100%
+    z-index: 10
+
+    @extend .with-padding
+
+  h2, h3
+    margin: 0
+    padding: 0
+
+  h3
+    margin-top: space.xs
+
+  a 
+    img
+      backface-visibility: hidden
+      opacity: .9
+      transition: all .2s
+      transform: scale(1)
+      z-index: 1
+
+    &:hover img
+      opacity: 1
+      transform: scale(1.01)

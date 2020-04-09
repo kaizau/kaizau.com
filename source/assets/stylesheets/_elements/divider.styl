@@ -1,0 +1,80 @@
+.Divider
+  background: gray.smoke
+  padding: space.sm 0
+
+  //
+  // Quote
+  //
+
+  blockquote
+    margin: 0
+    padding: 0
+    text-align: center
+
+    span
+      color: gray.steel
+      font-size: font.lg
+      font-style: italic
+      position: relative
+
+      &:before
+        color: darken(gray.smoke, 8%)
+        content: "\201C"
+        display: block
+        font-size: 100px
+        font-family: font.georgia
+        font-style: italic
+        left: -50px
+        line-height: 1
+        position: absolute
+        top: -15px
+
+  cite
+    color: gray.silver
+    display: block
+    font-size: font.sm
+
+  //
+  // Nav
+  //
+
+  .Nav
+    @extend .Section
+
+  ul
+    padding: 0
+
+  a
+    color: gray.shale
+
+  //
+  // Horizontal
+  //
+
+  +above(viewport.sm)
+    padding: space.line 0
+    text-align: center
+
+    .Nav
+      height: space.line
+
+      li
+        margin-left: space.md
+
+        &:first-child
+          margin-left: 0
+
+    ul,
+    blockquote
+      display: inline-block
+
+    blockquote span:before
+      font-size: 120px
+      left: -65px
+      top: -25px
+
+    cite
+      display: inline-block
+      left: space.xs
+      position: relative
+      top: space.xxs
